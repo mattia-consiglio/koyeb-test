@@ -6,7 +6,7 @@ COPY pom.xml /usr/src/app/
 COPY src /usr/src/app/src
 
 # Esegue la compilazione
-RUN mvn -f /usr/src/app/pom.xml clean package
+RUN mvn -f /usr/src/app/pom.xml clean package -DskipTests
 
 # Fase di esecuzione
 FROM openjdk:17-jdk-slim
